@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="criacao-personagem.css">
+    <link rel="stylesheet" href="painel-do-usuario.css">
     <title>Gerenciador de Hábitos</title>
 </head>
 <body>
@@ -31,9 +32,24 @@
         <button class="btn-de-criacao-de-personagem" onclick="criarPersonagem()">Criar</button>
 
     </div>
-
-    <div class="painel-do-usuario">
-        
+    <div class="painel-do-usuario" id="painel-do-usuario">
+        <div class="painel-do-usuario-all-content">
+            <div class="avatar-painel-info-wrapper"> 
+                <div class="avatar-img-wrapper">
+                    <img id="avatar-img" src="" alt="">     
+                </div>
+                <div class="usuario-info-wrapper">
+                    <p id="nome-usuario"></p>
+                    <p id="lv-usuario"></p>
+                    <p id="xp-usuario"></p>
+                </div>               
+            </div>
+        </div>
+        <div class="habitos-wrapper">
+            <button onclick="usuario.levelUp(50)">teste</button>
+            <div class="habitos-content">
+            </div>
+        </div>
     </div>
 
 

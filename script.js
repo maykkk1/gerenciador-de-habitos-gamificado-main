@@ -31,12 +31,14 @@ class Usuario {
 
     levelUp(xpGain) {
         this.xp += xpGain
+        document.getElementById('xp-usuario').innerHTML = `${usuario.xp}/${usuario.xpToUp}`
         if (this.xp >= this.xpToUp) {
+            this.xp = this.xp - this.xpToUp
             this.level ++
-            this.xpToUp *= 1.5
-            console.log('parabens, vc subiu de lv')
+            this.xpToUp += 35
+            document.getElementById('lv-usuario').innerHTML = `Lv ${usuario.level}`
+            document.getElementById('xp-usuario').innerHTML = `${usuario.xp}/${usuario.xpToUp}`
         }
-
     }
 }
 
@@ -47,6 +49,11 @@ function criarPersonagem() {
     usuario.avatar = img[i]
     console.log(usuario.avatar)
     document.getElementById('criacao-de-char').style.display = 'none'
+    document.getElementById('painel-do-usuario').style.display = 'block'
+    document.getElementById('avatar-img').src=`/images/char_${i+1}.png`
+    document.getElementById('nome-usuario').innerHTML = usuario.nome
+    document.getElementById('lv-usuario').innerHTML = `Lv ${usuario.level}`
+    document.getElementById('xp-usuario').innerHTML = `${usuario.xp}/${usuario.xpToUp}`
 }
 
 

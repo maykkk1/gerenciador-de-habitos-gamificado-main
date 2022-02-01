@@ -8,7 +8,6 @@
     height: 460px;
     background-color: rgb(19, 16, 16);
     border: 2px solid rgb(230, 225, 225);
-    display: none;
 }
 .container-criacao-de-personagem h1 {
     font-family: var(--title-font);
