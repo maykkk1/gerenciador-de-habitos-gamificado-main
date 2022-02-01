@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: center;
     width: 375px;
-    height: 670px;
+    height: 100vh;
     background-color: var(--secondary-color);
     position: absolute;
     border-radius: 5px;
@@ -106,10 +106,44 @@
 }
 
 .habitos-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 85%;
     height: 95%;
-    background-color: rgb(244, 237, 248);
-    border-radius: 4px;
+    background-color: rgb(22, 18, 24);
+    border-radius: 8px;
 }
 
+.habito {
+    margin-top: 5px;
+    width: 97%;
+    height: 13.5%;
+    background-color: rgb(253, 253, 253);
+    border-radius: 8px;
+}
 
+#habito-1 { 
+    border: 2px solid rgb(0,255,0);
+}
+
+#habito-2 { 
+    border: 2px solid rgb(0,0,205);
+}
+
+#habito-3 { 
+    border: 2px solid var(--primary-color);
+}
+#habito-4 { 
+    border: 2px solid rgb(255,69,0);
+}
+#habito-5 { 
+    border: 2px solid rgb(255,215,0);
+}
+#habito-6 { 
+    border: 2px solid rgb(187, 15, 15);
+}
+
+#habito-7 { 
+    border: 2px solid rgb(84, 187, 15);
+}
