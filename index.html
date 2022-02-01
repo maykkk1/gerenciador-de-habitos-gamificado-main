@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="criacao-personagem.css">
+    <title>Gerenciador de Hábitos</title>
+</head>
+<body>
+    <div class="container-criacao-de-personagem" id="criacao-de-char">
+        <h1 class="criacao-de-personagem-title">Escolha seu avatar</h1>
+        <i class="fas fa-dice-d20"></i>
+        <div class="selecao-de-personagem-wrapper">
+            <i class="fas fa-angle-left" id="previous-btn"></i>
+            <div class="personagem-avatar">
+                <div class="avatars-container" id="avatar">
+                    <img src="/images/char_1.png" alt="">
+                    <img src="/images/char_2.png" alt="">
+                    <img src="/images/char_3.png" alt="">
+                    <img src="/images/char_4.png" alt="">
+                    <img src="/images/char_5.png" alt="">
+                </div>
+            </div>
+            <i class="fas fa-angle-right" id="next-btn"></i>
+
+        </div>
+        <label class="nome-label" for="usuario-nome">Nome</label>
+        <input type="text" id="usuario-nome">
+        <button class="btn-de-criacao-de-personagem" onclick="criarPersonagem()">Criar</button>
+
+    </div>
+
+    <div class="painel-do-usuario">
+        
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/619f70976e.js" crossorigin="anonymous"></script>
+</body>
+</html>

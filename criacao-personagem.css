@@ -1,0 +1,93 @@
+.container-criacao-de-personagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    position: absolute;
+    width: 370px;
+    height: 460px;
+    background-color: rgb(19, 16, 16);
+    border: 2px solid rgb(230, 225, 225);
+    display: none;
+}
+.container-criacao-de-personagem h1 {
+    font-family: var(--title-font);
+    color: white;
+    margin: 1rem 0 0rem 0;
+}
+.container-criacao-de-personagem i {
+    color: var(--primary-color);
+    font-size: 3rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.selecao-de-personagem-wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.personagem-avatar {
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+}
+
+.avatars-container {
+    display: flex;
+    transform: translateX(0);
+    transition: 400ms;
+}
+
+.personagem-avatar img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+.selecao-de-personagem-wrapper i {
+    cursor: pointer;
+    font-size: 4rem;
+    transition: 400ms;
+}
+
+.selecao-de-personagem-wrapper i:hover {
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.418);
+}
+
+.nome-label {
+    margin: 1rem 0 0.5rem 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+#usuario-nome {
+    text-align: center;
+    width: 80%;
+    height: 2rem;
+    font-size: 2rem;
+    outline: none;
+    margin-bottom: 1rem;
+    border: none;
+}
+.btn-de-criacao-de-personagem {
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-de-criacao-de-personagem:hover {
+    border: solid rgb(255, 253, 253) 1px;
+}
+
+
