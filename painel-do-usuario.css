@@ -8,7 +8,7 @@
     justify-content: center;
     width: 375px;
     height: 670px;
-    background-color: black;
+    background-color: var(--secondary-color);
     position: absolute;
     border-radius: 5px;
     display: none;
@@ -23,6 +23,7 @@
 }
 
 .avatar-painel-info-wrapper {
+    background-color: rgb(19, 16, 16);
     font-family: 'Press Start 2P', cursive;
     font-weight: 400;
     display: flex;
@@ -31,16 +32,20 @@
     justify-content: space-between;
     width: 85%;
     height: 80%;
-    background-color: var(--primary-color);
     border-radius: 5px;
+    box-shadow: 1px 0 4px white;
+    position: relative;
 }
 
 .avatar-img-wrapper {
     overflow: hidden;
     width: 100px;
     height: 100px;
-    border: 1px solid black;
+    border: 2px solid white;
     margin-left: 10px;
+    color: var(--primary-color);
+    border-radius: 5px;
+
 }
 .avatar-img-wrapper img {
     object-fit: cover;
@@ -50,7 +55,8 @@
 
 .usuario-info-wrapper {
     width: 60%;
-    color: white;
+    color: var(--primary-color);
+    text-shadow: 0.2px 0.2px 3px rgba(255, 255, 255, 0.308);
 }
 
 #nome-usuario {
@@ -63,9 +69,32 @@
     font-size: 1.2rem;
 }
 
+#lv-usuario strong {
+    color: white;
+}
+
 #xp-usuario {
     margin-top: 10px;
 }
+
+#xp-usuario strong {
+    color: white;
+}
+
+#adicionar-tarefa {
+    position: absolute;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    padding: .4rem .4rem;
+    border-radius: 5px;
+    right: 0.7rem;
+    bottom: 1.6rem;
+    cursor: pointer;
+}
+
+
+
 
 
 .habitos-wrapper {
@@ -79,8 +108,8 @@
 .habitos-content {
     width: 85%;
     height: 95%;
-    background-color: white;
-    border-radius: 2px;
+    background-color: rgb(244, 237, 248);
+    border-radius: 4px;
 }
 
 

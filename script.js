@@ -31,13 +31,13 @@ class Usuario {
 
     levelUp(xpGain) {
         this.xp += xpGain
-        document.getElementById('xp-usuario').innerHTML = `${usuario.xp}/${usuario.xpToUp}`
+        document.getElementById('xp-usuario').innerHTML = `<strong>${usuario.xp}</strong> / <strong>${usuario.xpToUp}</strong>`
         if (this.xp >= this.xpToUp) {
             this.xp = this.xp - this.xpToUp
             this.level ++
             this.xpToUp += 35
-            document.getElementById('lv-usuario').innerHTML = `Lv ${usuario.level}`
-            document.getElementById('xp-usuario').innerHTML = `${usuario.xp}/${usuario.xpToUp}`
+            document.getElementById('lv-usuario').innerHTML = `Lv   <strong>${usuario.level}</strong>`
+            document.getElementById('xp-usuario').innerHTML = `<strong>${usuario.xp}</strong>/<strong>${usuario.xpToUp}</strong>`
         }
     }
 }
@@ -52,8 +52,8 @@ function criarPersonagem() {
     document.getElementById('painel-do-usuario').style.display = 'block'
     document.getElementById('avatar-img').src=`/images/char_${i+1}.png`
     document.getElementById('nome-usuario').innerHTML = usuario.nome
-    document.getElementById('lv-usuario').innerHTML = `Lv ${usuario.level}`
-    document.getElementById('xp-usuario').innerHTML = `${usuario.xp}/${usuario.xpToUp}`
+    document.getElementById('lv-usuario').innerHTML = `Lv   <strong>${usuario.level}</strong>`
+    document.getElementById('xp-usuario').innerHTML = `<strong>${usuario.xp}</strong> / <strong>${usuario.xpToUp}</strong>`
 }
 
 
