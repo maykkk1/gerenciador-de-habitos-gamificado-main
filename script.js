@@ -118,9 +118,17 @@ const eraseBtn = () => {
     eraseBtn.addEventListener("click", function(event){
         event.preventDefault()
     });
+    eraseBtn.addEventListener('click', deletarTarefa)
     eraseBtn.innerHTML = '<i class="far fa-times-circle"></i>';
     return eraseBtn
 }
+
+const deletarTarefa = (evento) => {
+    const eraseBtnf = evento.target
+    const habitoDeletado = eraseBtnf.parentElement.parentElement.parentElement
+    habitoDeletado.remove()
+}
+
 
 
 
@@ -170,12 +178,10 @@ function fecharSecaoCriarHabitos() {
 
 
 function habitInputError () {
-    document.getElementById('input-error').style.display = 'block'
     document.getElementById('criar-habito').style.border = '1px solid red'
 }
 
 function habitInputErrorReset() {
-    document.getElementById('input-error').style.display = 'none'
     document.getElementById('criar-habito').style.border = 'none'
 }
 

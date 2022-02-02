@@ -33,15 +33,6 @@
     color: white;
 }
 
-#input-error {
-    color: red;
-    font-style: normal;
-    margin-right: auto;
-    display: none;
-    position: absolute;
-    top: 14.2rem;
-    left: 24rem;
-}
 
 .criacao-de-habito input {
     width: 80%;
