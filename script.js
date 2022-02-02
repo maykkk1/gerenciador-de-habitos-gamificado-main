@@ -31,11 +31,35 @@ class Usuario {
 
     levelUp(xpGain) {
         this.xp += xpGain
+        const xpSpan = document.getElementById('xp-span')
+        xpSpan.innerHTML = `+${xpGain}xp`
+        xpSpan.style.transition = 'ease-out 1000ms'
+        xpSpan.style.opacity = '1'
+        xpSpan.style.transform = 'translateY(-15px)'
+        setTimeout(function(){
+            xpSpan.style.opacity = '0'
+            xpSpan.style.transition = 'none'
+            xpSpan.style.transform = 'translateY(15px)'
+        }, 1000);
+
+
         document.getElementById('xp-usuario').innerHTML = `<strong>${usuario.xp}</strong> / <strong>${usuario.xpToUp}</strong>`
         if (this.xp >= this.xpToUp) {
             this.xp = this.xp - this.xpToUp
             this.level ++
-            this.xpToUp += 35
+            const music = new Audio('/music/levelup.mp3')
+            music.play();
+            music.loop =false;
+            const levelUpSpan = document.getElementById('level-up-span')
+            levelUpSpan.style.transition = 'ease-out 2000ms'
+            levelUpSpan.style.opacity = '1'
+            levelUpSpan.style.transform = 'translateY(-15px)'
+            setTimeout(function(){
+                levelUpSpan.style.opacity = '0'
+                levelUpSpan.style.transition = 'none'
+                levelUpSpan.style.transform = 'translateY(15px)'
+            }, 2000);
+            this.xpToUp += 75
             document.getElementById('lv-usuario').innerHTML = `Lv   <strong>${usuario.level}</strong>`
             document.getElementById('xp-usuario').innerHTML = `<strong>${usuario.xp}</strong>/<strong>${usuario.xpToUp}</strong>`
         }

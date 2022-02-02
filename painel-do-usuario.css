@@ -55,29 +55,57 @@
 .usuario-info-wrapper {
     width: 60%;
     color: var(--primary-color);
-    text-shadow: 0.2px 0.2px 3px rgba(255, 255, 255, 0.308);
 }
 
 #nome-usuario {
+    color: wheat;
     font-size: 2rem;
     text-transform: capitalize;
+    font-family: var(--title-font);
+}
+
+#level-up-span {
+    position: absolute;
+    bottom: 50%;
+    color: yellow;
+    text-shadow: 1px 1px 5px yellow;
+    opacity: 0;
+    transform: translateY(0);
+}
+
+#xp-span {
+    position: absolute;
+    color: rgb(40, 180, 99);
+    text-shadow: 2px 2px 5px rgb(40, 180, 99);
+    font-size: 1rem;
+    font-family: var(--title-font);
+    bottom: 12.3px;
+    left: 200px;
+    opacity: 0;
+    transform: translateY(0);
 }
 
 #lv-usuario {
+    color: wheat;
     margin-top: 10px;
     font-size: 1.2rem;
+    font-family: var(--title-font);
 }
 
 #lv-usuario strong {
     color: white;
+    font-family: var(--title-font);
 }
 
 #xp-usuario {
+    color: wheat;
     margin-top: 10px;
+    font-family: var(--title-font);
 }
 
 #xp-usuario strong {
     color: white;
+    font-family: var(--title-font);
 }
 
 #adicionar-tarefa {
