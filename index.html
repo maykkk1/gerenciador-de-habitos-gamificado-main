@@ -32,7 +32,7 @@
 
         </div>
         <label class="nome-label" for="usuario-nome">Nome</label>
-        <input type="text" id="usuario-nome">
+        <input class="hidden" autocomplete="off" type="text" id="usuario-nome">
         <button class="btn-de-criacao-de-personagem" onclick="criarPersonagem()">Criar</button>
 
     </div>
@@ -50,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <form class="habitos-wrapper">
+        <form autocomplete="off" class="habitos-wrapper">
             <ul class="habitos-content" id="habitos-content">
             </ul>
         </form>    
@@ -58,7 +58,7 @@
     <div class="criacao-de-habito" id="secao-criacao-de-habito">
         <button id="exitBtn" onclick="fecharSecaoCriarHabitos()"><i class="fas fa-times"></i></button>
         <label for="criar-habito">Novo hábito</label>
-        <input type="text" id="criar-habito" onclick="habitInputErrorReset()">
+        <input class="hidden" autocomplete="off" type="text" id="criar-habito" onclick="habitInputErrorReset()">
         <button class="btn-habit-tier" id="habit-tier-comum">Comum</button>
         <button class="btn-habit-tier" id="habit-tier-raro">Raro</button>
         <button class="btn-habit-tier" id="habit-tier-epico">Épico</button>
