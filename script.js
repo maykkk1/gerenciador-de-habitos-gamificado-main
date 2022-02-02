@@ -68,16 +68,24 @@ class Usuario {
 
 
 function criarPersonagem() {
-    usuario = new Usuario;
-    usuario.nome = document.getElementById('usuario-nome').value
-    usuario.avatar = img[i]
-    console.log(usuario.avatar)
-    document.getElementById('criacao-de-char').style.display = 'none'
-    document.getElementById('painel-do-usuario').style.display = 'block'
-    document.getElementById('avatar-img').src=`/images/char_${i+1}.png`
-    document.getElementById('nome-usuario').innerHTML = usuario.nome
-    document.getElementById('lv-usuario').innerHTML = `Lv   <strong>${usuario.level}</strong>`
-    document.getElementById('xp-usuario').innerHTML = `<strong>${usuario.xp}</strong> / <strong>${usuario.xpToUp}</strong>`
+    if (document.getElementById('usuario-nome').value.length <= 0) {
+        document.getElementById('usuario-nome').style.border = '1px solid red'
+    } else {
+        usuario = new Usuario;
+        usuario.nome = document.getElementById('usuario-nome').value
+        usuario.avatar = img[i]
+        console.log(usuario.avatar)
+        document.getElementById('criacao-de-char').style.display = 'none'
+        document.getElementById('painel-do-usuario').style.display = 'block'
+        document.getElementById('avatar-img').src=`/images/char_${i+1}.png`
+        document.getElementById('nome-usuario').innerHTML = usuario.nome
+        document.getElementById('lv-usuario').innerHTML = `Lv   <strong>${usuario.level}</strong>`
+        document.getElementById('xp-usuario').innerHTML = `<strong>${usuario.xp}</strong> / <strong>${usuario.xpToUp}</strong>`
+    }
+}
+
+function resetBorderUsuarioNome() {
+    document.getElementById('usuario-nome').style.border = 'none'
 }
 
 
@@ -223,3 +231,9 @@ const usuarioNomeLoseFocus = document.getElementById('usuario-nome')
 usuarioNomeLoseFocus.addEventListener('keyup',function(e){
     if (e.which == 13) this.blur();
 });
+usuarioNomeLoseFocus.addEventListener('keyup',function(e){
+    if (e.which == 13) criarPersonagem();
+});
+
+
+
