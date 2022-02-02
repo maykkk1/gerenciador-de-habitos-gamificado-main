@@ -7,7 +7,7 @@ previousBtn.addEventListener('click', previousAvatar);
 nextBtn.addEventListener('click', nextAvatar);
 function previousAvatar() {
     console.log(i)
-    i++
+    i--
     if (i < 0) {
         i = img.length - 1
     }
