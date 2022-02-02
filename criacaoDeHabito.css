@@ -1,0 +1,113 @@
+.criacao-de-habito {
+    width: 350px;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+#exitBtn {
+    margin: .5rem .5rem 0 auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    border: none;
+    cursor: pointer;
+}
+
+.criacao-de-habito i {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+
+
+.criacao-de-habito label {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: white;
+}
+
+#input-error {
+    color: red;
+    font-style: normal;
+    margin-right: auto;
+    display: none;
+    position: absolute;
+    top: 14.2rem;
+    left: 24rem;
+}
+
+.criacao-de-habito input {
+    width: 80%;
+    height: 3rem;
+    font-size: 2rem;
+    outline: none;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    border: none;
+}
+
+.btn-habit-tier {
+    margin-top: 1rem;
+    width: 5rem;
+    height: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: var(--title-font);
+    transition: 400ms;
+}
+
+#habit-tier-comum {
+    background-color: rgb(40, 180, 99);
+    box-shadow: 1px 1px 3px rgb(40, 180, 99);
+}
+#habit-tier-comum:hover {
+    background-color: rgba(40, 180, 98, 0.562);
+}
+
+#habit-tier-raro {
+    background-color: rgb(25, 52, 243);
+    box-shadow: 1px 1px 3px rgb(25, 52, 243);
+
+}
+#habit-tier-raro:hover {
+    background-color: rgba(25, 50, 243, 0.479);
+}
+
+#habit-tier-epico {
+    background-color: var(--primary-color);
+    box-shadow: 1px 1px 3px var(--primary-color);
+
+}
+#habit-tier-epico:hover {
+    background-color: rgba(96, 45, 218, 0.575);
+}
+
+#habit-tier-lendario {
+    background-color: rgb(255,69,0);
+    box-shadow: 1px 1px 3px rgb(255,69,0);
+
+}
+#habit-tier-lendario:hover {
+    background-color: rgba(255, 68, 0, 0.541);
+}
+
+.criacao-de-habito p {
+    margin-top: 2rem;
+    font-style: italic;
+    font-size: 12px;
+    color: white;
+}
+

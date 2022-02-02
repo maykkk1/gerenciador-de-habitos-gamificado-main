@@ -5,7 +5,7 @@
     border-radius: 10px;
     position: absolute;
     width: 370px;
-    height: 460px;
+    padding-bottom: 3rem;
     background-color: rgb(19, 16, 16);
     border: 2px solid rgb(230, 225, 225);
 }

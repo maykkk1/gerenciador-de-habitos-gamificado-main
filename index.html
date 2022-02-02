@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="criacao-personagem.css">
     <link rel="stylesheet" href="painel-do-usuario.css">
+    <link rel="stylesheet" href="criacaoDeHabito.css">
     <title>Gerenciador de Hábitos</title>
 </head>
+
 <body>
     <div class="container-criacao-de-personagem" id="criacao-de-char">
         <h1 class="criacao-de-personagem-title">Escolha seu avatar</h1>
@@ -34,32 +37,36 @@
     </div>
     <div class="painel-do-usuario" id="painel-do-usuario">
         <div class="painel-do-usuario-all-content">
-            <div class="avatar-painel-info-wrapper"> 
+            <div class="avatar-painel-info-wrapper">
                 <div class="avatar-img-wrapper">
-                    <img id="avatar-img" src="" alt="">     
+                    <img id="avatar-img" src="" alt="">
                 </div>
                 <div class="usuario-info-wrapper">
                     <p id="nome-usuario"></p>
                     <p id="lv-usuario"></p>
                     <p id="xp-usuario"><strong></strong></p>
-                    <i id="adicionar-tarefa" class="fas fa-plus" onclick="usuario.levelUp(50)"></i>
-                </div>               
+                    <i id="adicionar-tarefa" class="fas fa-plus" onclick="abrirSecaoDeCriarHabitos()"></i>
+                </div>
             </div>
         </div>
-        <div class="habitos-wrapper">
-            <div class="habitos-content">
-                <div id="habito-1" class="habito">  </div>
-                <div id="habito-2" class="habito">  </div>
-                <div id="habito-3" class="habito">  </div>
-                <div id="habito-4" class="habito">  </div>
-                <div id="habito-5" class="habito">  </div>
-                <div id="habito-6" class="habito">  </div>
-            </div>
-        </div>
+        <form class="habitos-wrapper">
+            <ul class="habitos-content" id="habitos-content">
+            </ul>
+        </form>    
     </div>
-
-
+    <div class="criacao-de-habito" id="secao-criacao-de-habito">
+        <button id="exitBtn" onclick="fecharSecaoCriarHabitos()"><i class="fas fa-times"></i></button>
+        <label for="criar-habito">Novo hábito</label>
+        <p id=input-error>informe o nome do hábito</p>
+        <input type="text" id="criar-habito" onclick="habitInputErrorReset()">
+        <button class="btn-habit-tier" id="habit-tier-comum">Comum</button>
+        <button class="btn-habit-tier" id="habit-tier-raro">Raro</button>
+        <button class="btn-habit-tier" id="habit-tier-epico">Épico</button>
+        <button class="btn-habit-tier" id="habit-tier-lendario">Lendário</button>  
+        <p>Quanto maior o desafio, mais experiência você ganha.</p>
+    </div>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/619f70976e.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

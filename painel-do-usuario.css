@@ -7,9 +7,8 @@
     flex-direction: column;
     justify-content: center;
     width: 375px;
-    height: 100vh;
+    height: max-content;
     background-color: var(--secondary-color);
-    position: absolute;
     border-radius: 5px;
     display: none;
 }
@@ -23,8 +22,9 @@
 }
 
 .avatar-painel-info-wrapper {
-    background-color: rgb(19, 16, 16);
-    font-family: 'Press Start 2P', cursive;
+    padding: 10px 0 10px 0;
+    margin-bottom: 10px;
+    background-color: rgb(34, 31, 31);
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -33,7 +33,6 @@
     width: 85%;
     height: 80%;
     border-radius: 5px;
-    box-shadow: 1px 0 4px white;
     position: relative;
 }
 
@@ -41,7 +40,7 @@
     overflow: hidden;
     width: 100px;
     height: 100px;
-    border: 2px solid white;
+    border: 2px solid var(--secondary-color);
     margin-left: 10px;
     color: var(--primary-color);
     border-radius: 5px;
@@ -111,39 +110,106 @@
     align-items: center;
     width: 85%;
     height: 95%;
-    background-color: rgb(22, 18, 24);
+    background-color: rgb(34, 31, 31);
     border-radius: 8px;
+    list-style: none;
 }
 
-.habito {
+.habito-comum {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
     margin-top: 5px;
     width: 97%;
-    height: 13.5%;
+    height: 50px;
+    background-color: rgba(253, 253, 253, 0.486);
+    border-radius: 8px;
+    padding:0 0 0 10px;
+    background-color:  rgb(29, 27, 27);
+    -moz-box-shadow:    inset 0 0 10px rgb(40, 180, 99);
+    -webkit-box-shadow: inset 0 0 10px rgb(40, 180, 99);
+    box-shadow:         inset 0 0 10px rgb(40, 180, 99);
+}
+
+.habito-raro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    margin-top: 5px;
+    width: 97%;
+    height: 50px;
     background-color: rgb(253, 253, 253);
     border-radius: 8px;
-}
+    padding:0 0 0 10px;
+    background-color:  rgb(29, 27, 27);
+    -moz-box-shadow:    inset 0 0 10px rgb(25, 52, 243 );
+    -webkit-box-shadow: inset 0 0 10px rgb(25, 52, 243 );
+    box-shadow:         inset 0 0 10px rgb(25, 52, 243 );
+} 
 
-#habito-1 { 
-    border: 2px solid rgb(0,255,0);
-}
+.habito-epico {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    margin-top: 5px;
+    width: 97%;
+    height: 50px;
+    background-color: rgb(253, 253, 253);
+    border-radius: 8px;
+    padding:0 0 0 10px;
+    background-color:  rgb(29, 27, 27);
+    background-color:  black;
+    -moz-box-shadow:    inset 0 0 10px var(--primary-color);
+    -webkit-box-shadow: inset 0 0 10px var(--primary-color);
+    box-shadow:         inset 0 0 10px var(--primary-color);
+} 
 
-#habito-2 { 
-    border: 2px solid rgb(0,0,205);
-}
 
-#habito-3 { 
-    border: 2px solid var(--primary-color);
-}
-#habito-4 { 
-    border: 2px solid rgb(255,69,0);
-}
-#habito-5 { 
-    border: 2px solid rgb(255,215,0);
-}
-#habito-6 { 
-    border: 2px solid rgb(187, 15, 15);
-}
+.habito-lendario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    margin-top: 5px;
+    width: 97%;
+    height: 50px;
+    background-color: rgb(253, 253, 253);
+    border-radius: 8px;
+    padding:0 0 0 10px;
+    background-color:  rgb(29, 27, 27);
+    -moz-box-shadow:    inset 0 0 10px rgb(255,69,0);
+    -webkit-box-shadow: inset 0 0 10px rgb(255,69,0);
+    box-shadow:         inset 0 0 10px rgb(255,69,0);
+} 
 
-#habito-7 { 
-    border: 2px solid rgb(84, 187, 15);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.habit-icon-wrapper button {
+    font-size: 1.7rem;
+    margin-right: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
 }

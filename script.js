@@ -58,4 +58,138 @@ function criarPersonagem() {
 
 
 
+let escolhaDeDificuldade = ''
+function dificuldade (dificuldade) {
+    escolhaDeDificuldade = dificuldade
+}
+const criarHabito = (evento) => {
+    evento.preventDefault();
+    let habitoConteudo = document.getElementById('criar-habito').value;
+    if (habitoConteudo.length <= 0) {
+        habitInputError ()
+    } else {
+        const ul = document.querySelector('ul');
 
+        const habito = document.createElement('li');
+        habito.classList.add(escolhaDeDificuldade);
+        ul.appendChild(habito);
+        let conteudo = habitoConteudo;
+        habito.innerHTML = conteudo;
+        const div = document.createElement('div');
+        div.classList.add('habit-icon-wrapper');
+        habito.appendChild(div)
+        div.appendChild(doneBtn())
+        div.appendChild(eraseBtn())
+        fecharSecaoCriarHabitos()
+        document.getElementById('criar-habito').value = ''
+    }
+}
+
+const doneBtn = () => {
+    const doneBtn = document.createElement('button')
+    doneBtn.addEventListener("click", function(event){
+        event.preventDefault()
+    });
+    doneBtn.addEventListener("click", habitoFeito)
+    doneBtn.innerHTML = '<i class="far fa-check-circle"></i>'
+    return doneBtn
+}
+
+const habitoFeito = (evento) => {
+    const doneBtnF = evento.target
+    const habitoFeito = doneBtnF.parentElement.parentElement.parentElement
+    if (habitoFeito.classList.value == 'habito-comum') {
+        usuario.levelUp(15)
+    }
+    if (habitoFeito.classList.value == 'habito-raro') {
+        usuario.levelUp(30)
+    }
+    if (habitoFeito.classList.value == 'habito-epico') {
+        usuario.levelUp(50)
+    }
+    if (habitoFeito.classList.value == 'habito-lendario') {
+        usuario.levelUp(70)
+    }
+}
+
+
+const eraseBtn = () => {
+    const eraseBtn = document.createElement('button');
+    eraseBtn.addEventListener("click", function(event){
+        event.preventDefault()
+    });
+    eraseBtn.innerHTML = '<i class="far fa-times-circle"></i>';
+    return eraseBtn
+}
+
+
+
+
+
+
+
+
+const btnComum = document.getElementById('habit-tier-comum')
+const btnRaro = document.getElementById('habit-tier-raro')
+const btnEpico = document.getElementById('habit-tier-epico')
+const btnLendario = document.getElementById('habit-tier-lendario')
+
+
+btnComum.addEventListener('click', function() {
+    dificuldade('habito-comum')
+});
+btnRaro.addEventListener('click', function() {
+    dificuldade('habito-raro')
+});
+btnEpico.addEventListener('click', function() {
+    dificuldade('habito-epico')
+});
+btnLendario.addEventListener('click', function() {
+    dificuldade('habito-lendario')
+});
+
+btnComum.addEventListener('click', criarHabito);
+btnRaro.addEventListener('click', criarHabito);
+btnEpico.addEventListener('click', criarHabito);
+btnLendario.addEventListener('click', criarHabito);
+
+
+
+function abrirSecaoDeCriarHabitos() {
+    document.getElementById('painel-do-usuario').style.display = 'none'
+    document.getElementById('secao-criacao-de-habito').style.display = 'flex'
+}
+
+function fecharSecaoCriarHabitos() {
+    document.getElementById('secao-criacao-de-habito').style.display = 'none'
+    document.getElementById('painel-do-usuario').style.display = 'flex'
+    document.getElementById('criar-habito').value = ''
+    habitInputErrorReset()
+}
+
+
+
+function habitInputError () {
+    document.getElementById('input-error').style.display = 'block'
+    document.getElementById('criar-habito').style.border = '1px solid red'
+}
+
+function habitInputErrorReset() {
+    document.getElementById('input-error').style.display = 'none'
+    document.getElementById('criar-habito').style.border = 'none'
+}
+
+
+
+
+
+
+
+const criarHabitoLoseFocus = document.getElementById('criar-habito')
+criarHabitoLoseFocus.addEventListener('keyup',function(e){
+    if (e.which == 13) this.blur();
+});
+const usuarioNomeLoseFocus = document.getElementById('usuario-nome')
+usuarioNomeLoseFocus.addEventListener('keyup',function(e){
+    if (e.which == 13) this.blur();
+});
