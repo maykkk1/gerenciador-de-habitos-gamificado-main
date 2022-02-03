@@ -1,5 +1,26 @@
-# gerenciador-de-tarefas-gamificado
+# Gerenciador de habitos gamificado
 
-O projeto se trata de um gerenciador de tarefas que se utiliza dos conceitos da gamificação.
 
-URL Live: https://lucid-dubinsky-568658.netlify.app/
+
+## Descrição 
+
+O projeto se trata de um gerenciador de habitos com elementos de gamificação, onde o usuário ganha recompensas de acordo com a dificuldade do hábito.
+
+##screenshots
+
+
+
+
+
+
+
+
+
+## Feito com:
+* HTML  
+* CSS
+* Javascript
+
+
+
+  
