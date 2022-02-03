@@ -162,13 +162,6 @@ const deletarTarefa = (evento) => {
 }
 
 
-
-
-
-
-
-
-
 const btnComum = document.getElementById('habit-tier-comum')
 const btnRaro = document.getElementById('habit-tier-raro')
 const btnEpico = document.getElementById('habit-tier-epico')
@@ -207,8 +200,6 @@ function fecharSecaoCriarHabitos() {
     habitInputErrorReset()
 }
 
-
-
 function habitInputError () {
     document.getElementById('criar-habito').style.border = '1px solid red'
 }
@@ -216,10 +207,6 @@ function habitInputError () {
 function habitInputErrorReset() {
     document.getElementById('criar-habito').style.border = 'none'
 }
-
-
-
-
 
 
 
