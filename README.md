@@ -1,4 +1,4 @@
-# gerenciador-de-tarefas-gamificado
+# gerenciador-de-habitos-gamificado
 
 O projeto se trata de um gerenciador de tarefas que se utiliza dos conceitos da gamificação.
 
